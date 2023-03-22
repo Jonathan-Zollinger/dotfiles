@@ -29,6 +29,7 @@ unset rc
 alias ls='ls --color' 
 alias ll='ls -la'
 alias yum='sudo yum -y'
-
+alias vi='nvim'
+alias vim='nvim'
 
 export EDITOR=nvim
