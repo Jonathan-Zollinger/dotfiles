@@ -1,0 +1,11 @@
+   11  sudo dnf install   git   j4-dmenu-desktop   lxappearance   light   picom   alacritty   polybar   autorandr   playerctl   feh   bat   httpie \ -Y
+   12  sudo dnf install   git   j4-dmenu-desktop   lxappearance   light   picom   alacritty   polybar   autorandr   playerctl   feh   bat   httpie \ -y
+   13  sudo dnf install   git   j4-dmenu-desktop   lxappearance   light   picom   alacritty   polybar   autorandr   playerctl   feh   bat   httpie
+   59  sudo dnf install -y neovim python3-neovim
+   60  sudo dnf install i3
+   78  sudo dnf install code
+  193  sudo dnf install -y neovim python3-neovim
+  317  sudo dnf install gcc pkg-config wayland-devel libX11-devel libxkbcommon-x11-devel mesa-libGLES-devel mesa-libEGL-devel libXcursor-devel vulkan-headers
+  399  history | grep dnf install
+  401  history | grep 'dnf install'
+  402  history | grep 'dnf install' > InstallViaDnf
