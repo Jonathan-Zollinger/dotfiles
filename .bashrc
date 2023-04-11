@@ -29,8 +29,10 @@ unset rc
 alias ls='ls --color' 
 alias ll='ls -la'
 alias yum='sudo yum -y'
+alias install='install --color'
 alias vi='nvim'
 alias vim='nvim'
+alias kssh='kitty +kitten ssh'
 
 export EDITOR=nvim
 eval "$(starship init bash)"
