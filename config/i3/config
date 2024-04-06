@@ -80,7 +80,7 @@ bindsym $mod+Right focus right
 # move focused window
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
+bindsym $mod+Shift+l move u
 bindsym $mod+Shift+semicolon move right
 
 # alternatively, you can use the cursor keys:
@@ -196,5 +196,4 @@ exec_always pkill -9 polybar; polybar
 exec_always killall picom ; picom -b
 # background / wallpaper. set to cycle through ~/Pictures
 exec --no-startup-id nitrogen --restore
-
-
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080

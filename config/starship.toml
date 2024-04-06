@@ -1,11 +1,15 @@
 format = """
 
-$directory\
-$git_branch\
-$docker_context
+$directory $fill $git_branch$git_status$git_metrics        
 
-[ ](fg:Green)\
+[](fg:Black)\
+[](fg:Blue bg:Black)\
+[](fg:Green bg:Blue)\
+[   ](bg:Green fg:Black)\
+[ ](fg:Green)\
 """
+
+continuation_prompt = "[   ](fg:Green)"
 
 # symbols: https://www.nerdfonts.com/cheat-sheet
 
@@ -13,6 +17,8 @@ $docker_context
 # add_newline = false
 
 # You can also replace your username with a neat symbol like  to save some space
+[fill]
+symbol = ' '
 [username]
 show_always = true
 style_user = "bg:Purple fg:White"
@@ -20,15 +26,15 @@ style_root = "bg:Purple fg:White"
 format = """\
 [ ](Purple)\
 [ Z☻llinger ]($style)\
-[ ](fg:Purple)\
+[](fg:Purple)\
 """
 
 [directory]
 style = "bg:Blue fg:Black"
 format = """\
 [](fg:blue)\
-[$path ]($style)\
-[](fg:blue)\
+[ $path ]($style)\
+[](fg:blue)\
 """
 truncation_length = 3 
 truncation_symbol = "♪~ ᕕ(ᐛ)ᕗ/"
@@ -41,7 +47,6 @@ style = "bg:Blue fg:White"
 "Downloads" = ""
 "Music" = ""
 "Pictures" = "ಠ⌣ಠ"
-"git.trivir.com" = "𝝙"
 "github.houston.softwaregrp.net" = "⩄"
 
 # Keep in mind that the order matters. For example:
@@ -50,15 +55,19 @@ style = "bg:Blue fg:White"
 # So either put "Important Documents" before "Documents" or use the substituted version:
 # "Important  " = "  "
 
-
-[docker_context]
-style = "bg:Blue fg:White"
-symbol = ""
-format = "[$symbol]($style)"
-
 [git_branch]
-style = "fg:green"
+style = "bg:green fg:black"
 symbol = ""
-format = """[ on '$branch' $symbol ]($style)\
+format = """\
+[](fg:green)\
+[ $symbol '$branch']($style)\
+[](fg:green bg:black)\
 """
 
+[git_status]
+style = "bg:Black fg:green"
+up_to_date = '👍'
+format = """\
+[ $all_status$ahead_behind]($style)\
+[](fg:Black)\
+"""

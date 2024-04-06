@@ -8,10 +8,10 @@
  */
 
 configuration {
-  font: "Noto Sans 12";
+  font: "Fira Code 12";
 
   drun {
-    display-name: "";
+    display-name: "";
   }
 
   run {
