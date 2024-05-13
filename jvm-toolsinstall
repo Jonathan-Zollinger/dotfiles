@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#
+sdk_env() {
+	SDKMAN_DIR="$HOME/.sdkman"
+	[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+}
+logfile="$PWD/jvm-tools-install.log"
+#if !(sdk -v &>/dev/null); then 
+#	gum spin --spinner dot --title "installing sdkman..." -- curl -s "https://get.sdkman.io" | bash &>$logfile
+# fi
+tools=('kotlin' 'maven' 'micronaut' 'gradle' 'java 17.0.11-graal' 'java 17.0.11-zulu')
+for tool in "${tools[@]}"; do
+	gum log "installing $tool..."
+	sdk install "$tool" &>$logfile
+done
